@@ -14,12 +14,6 @@
       "Lunar\\Tests\\": "tests/"
     }
   },
-  "repositories": {
-    "lunar": {
-      "type": "vcs",
-      "url": "https://github.com/lunarway/payments-api-sdk"
-    }
-  },
   "require": {
     "php": ">=7.1",
     "ext-curl": "*"

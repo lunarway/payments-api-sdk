@@ -150,6 +150,18 @@ class PaymentsTest extends BaseTest
 		$this->assertNotNull($challenge);
 	}
 
+	public function testCapture()
+	{
+		$payment_id = $this->getNewPaymentId();
+
+		$payment = $this->payments->capture($payment_id, ['amount' => array(
+			'currency' => 'EUR',
+			'decimal' => '0.10'
+		),]);
+
+		$this->assertArrayHasKey('challenges', $payment);
+	}
+
 	/**
 	 *
 	 */
